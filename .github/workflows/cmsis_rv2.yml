@@ -1,4 +1,3 @@
-
 name: RTOS2 Validation
 
 on:
@@ -10,6 +9,9 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
+permissions:
+  contents: read
 
 env:
   CMSIS_PACK_ROOT: ${{ github.workspace }}/.packs

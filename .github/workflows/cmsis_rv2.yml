@@ -133,8 +133,4 @@ jobs:
         if: ${{ env.GITHUB_TOKEN }}
         uses: EnricoMi/publish-unit-test-result-action/linux@v2
         with:
-          commit: ${{ github.event.workflow_run.head_sha }}
-          event_file: ${{ github.event_path }}
-          report_individual_runs: true
-          event_name: ${{ github.event.workflow_run.event }}
           files: "artifacts/**/*.junit"
